@@ -6,58 +6,113 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+:root {
+  --green: #0b4d2a;
+  --light: #f5f7f6;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  background: var(--light);
   color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #0b4d2a, #136c3a);
+  color: white;
+  padding: 50px 20px;
   text-align: center;
 }
-header {
-  background: #0b4d2a;
-  color: white;
-  padding: 35px 15px;
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
 }
+
+header p {
+  margin-top: 10px;
+  font-size: 18px;
+  opacity: 0.95;
+}
+
 main {
-  max-width: 720px;
+  max-width: 960px;
   margin: auto;
-  padding: 20px;
+  padding: 30px 15px 50px;
 }
+
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.intro strong {
+  color: var(--green);
+  font-size: 18px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
 .card {
   background: white;
-  padding: 25px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 30px 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  text-align: center;
 }
+
+.card.popular {
+  border: 3px solid var(--green);
+  transform: scale(1.03);
+}
+
+.badge {
+  background: var(--green);
+  color: white;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
 .price {
-  font-size: 26px;
+  font-size: 34px;
   font-weight: bold;
-  margin: 10px 0;
+  margin: 15px 0 5px;
 }
+
+.period {
+  color: #666;
+  margin-bottom: 15px;
+}
+
 .button {
   display: block;
-  margin-top: 15px;
+  margin-top: 20px;
   padding: 15px;
-  background: #0b4d2a;
+  background: var(--green);
   color: white;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 10px;
   font-size: 16px;
+  transition: background 0.2s ease;
 }
+
 .button:hover {
   background: #083d21;
 }
-.highlight {
-  font-weight: bold;
-  color: #0b4d2a;
-}
+
 footer {
-  font-size: 13px;
-  color: #666;
-  padding: 25px 10px;
-}
-.small {
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+  padding: 25px 15px;
+  text-align: center;
   font-size: 14px;
   color: #555;
 }
@@ -73,52 +128,52 @@ footer {
 
 <main>
 
-  <div class="card">
-    <p class="highlight">Guaranteed €300 Prize Every Week</p>
+  <div class="intro">
+    <strong>Guaranteed €300 prize every week</strong>
     <p>
-      Support St Michael’s GAA Club by joining the €300 Club Draw.
-      Each subscription gives automatic entry into the weekly draw.
+      Join the St Michael’s €300 Club Draw and support your club.
+      All subscriptions include automatic weekly entry.
     </p>
   </div>
 
-  <div class="card">
-    <h2>Weekly Subscription</h2>
-    <div class="price">€5 per week</div>
-    <p>Automatic weekly entry</p>
-    <a class="button" href="https://buy.stripe.com/4gM4gA4T2ePo0oK0W3aEE09">
-      Join Weekly
-    </a>
-  </div>
+  <div class="cards">
 
-  <div class="card">
-    <h2>Monthly Subscription</h2>
-    <div class="price">€20 per month</div>
-    <p>Automatic monthly payment</p>
-    <a class="button" href="https://buy.stripe.com/00w4gAbhq36G6N8gV1aEE0a">
-      Join Monthly
-    </a>
-  </div>
+    <div class="card">
+      <h2>Weekly</h2>
+      <div class="price">€5</div>
+      <div class="period">per week</div>
+      <a class="button" href="https://buy.stripe.com/4gM4gA4T2ePo0oK0W3aEE09">
+        Join Weekly
+      </a>
+    </div>
 
-  <div class="card">
-    <h2>Annual Subscription</h2>
-    <div class="price">€240 per year</div>
-    <p>Best value – full year of weekly entries</p>
-    <a class="button" href="https://buy.stripe.com/cNi7sM4T28r08Vg0W3aEE0b">
-      Join Annually
-    </a>
-  </div>
+    <div class="card">
+      <h2>Monthly</h2>
+      <div class="price">€20</div>
+      <div class="period">per month</div>
+      <a class="button" href="https://buy.stripe.com/00w4gAbhq36G6N8gV1aEE0a">
+        Join Monthly
+      </a>
+    </div>
 
-  <div class="card small">
-    <p>
-      Payments are processed securely by Stripe.  
-      Subscriptions can be managed or cancelled at any time via Stripe.
-    </p>
+    <div class="card popular">
+      <div class="badge">Best Value</div>
+      <h2>Annual</h2>
+      <div class="price">€240</div>
+      <div class="period">per year</div>
+      <a class="button" href="https://buy.stripe.com/cNi7sM4T28r08Vg0W3aEE0b">
+        Join Annually
+      </a>
+    </div>
+
   </div>
 
 </main>
 
 <footer>
-  © St Michael’s GAA Club · €300 Club Draw
+  © St Michael’s GAA Club · Payments processed securely by Stripe  
+  <br>
+  Subscriptions can be managed or cancelled at any time.
 </footer>
 
 </body>
