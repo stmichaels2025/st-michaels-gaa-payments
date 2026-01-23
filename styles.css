@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+  color: #222;
+  text-align: center;
+}
+
+header {
+  background: #0a7c3a;
+  color: white;
+  padding: 2rem 1rem;
+}
+
+main {
+  padding: 2rem 1rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+.section-intro {
+  color: #555;
+  max-width: 500px;
+  margin: 0 auto 1.5rem;
+}
+
+.payments {
+  max-width: 520px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.pay-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  border: 2px solid #e0e0e0;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.pay-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.pay-card h3 {
+  margin: 0;
+  color: #0a7c3a;
+}
+
+.pay-card p {
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.pay-card span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.pay-card.highlight {
+  border-color: #0a7c3a;
+}
+
+.pay-card.secondary h3 {
+  color: #444;
+}
+
+.renewal-note {
+  max-width: 520px;
+  margin: 1.5rem auto 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.renewal-note a {
+  color: #0a7c3a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.renewal-note a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
