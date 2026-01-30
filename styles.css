@@ -14,27 +14,26 @@
 
 body {
   margin: 0;
+  background: var(--bg);
   color: var(--text);
   text-align: center;
   line-height: 1.4;
+}
 
-  /* Background image with soft overlay */
+/* Background image behind the header (reliable on GitHub Pages + mobile) */
+header {
+  color: white;
+  padding: 2.5rem 1rem;
+
   background:
     linear-gradient(
-      rgba(244,246,248,0.94),
-      rgba(244,246,248,0.94)
+      rgba(10,124,58,0.85),
+      rgba(10,124,58,0.85)
     ),
-    url("background.jpg");
+    url("./background.jpg");
 
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-}
-
-header {
-  background: var(--green);
-  color: white;
-  padding: 2rem 1rem;
 }
 
 .header-inner{
@@ -79,7 +78,7 @@ section {
   text-decoration: none;
   color: inherit;
   border: 2px solid var(--line);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
   text-align: left;
 }
 
