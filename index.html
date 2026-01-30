@@ -4,19 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>St Michael’s GAA Club – Club €300 Draw</title>
+  <meta name="description" content="St Michael’s GAA Club Sligo – Club €300 Draw payments" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <header>
-  <h1>St Michael’s GAA Club</h1>
-  <p>Sligo – Club €300 Draw</p>
+  <div class="header-inner">
+    <img
+      src="club-crest.jpg"
+      alt="St Michael’s GAA Club crest"
+      class="club-crest"
+    />
+    <div>
+      <h1>St Michael’s GAA Club</h1>
+      <p>Sligo – Club €300 Draw</p>
+    </div>
+  </div>
 </header>
 
 <main>
 
   <!-- AUTO RENEWAL -->
-  <section>
+  <section id="auto">
     <h2>🔁 Auto-Renewal Club €300 Draw</h2>
     <p class="section-intro">
       Set it up once and your entry renews automatically.
@@ -24,48 +34,49 @@
 
     <div class="payments">
 
-      <a class="pay-card" href="REPLACE_WITH_LINK">
+      <a class="pay-card" href="REPLACE_WITH_LINK" target="_blank" rel="noopener">
         <h3>€5 per week</h3>
         <p>3 tickets for the Club €300 Draw</p>
-        <span>Auto renewed every week. Payments are automatically renewed upon the expiry of your selected ticket until you cancel your subscription.</span>
+        <span>Auto renewed weekly until cancelled.</span>
       </a>
 
-      <a class="pay-card" href="REPLACE_WITH_LINK">
+      <a class="pay-card" href="REPLACE_WITH_LINK" target="_blank" rel="noopener">
         <h3>€8 per month</h3>
         <p>1 ticket for the Club €300 Draw</p>
-        <span>Auto renewed monthly. Payments are automatically renewed upon the expiry of your selected ticket until you cancel your subscription.</span>
+        <span>Auto renewed monthly until cancelled.</span>
       </a>
 
-      <a class="pay-card" href="REPLACE_WITH_LINK">
+      <a class="pay-card" href="REPLACE_WITH_LINK" target="_blank" rel="noopener">
         <h3>€20 per month</h3>
         <p>3 tickets for the Club €300 Draw</p>
-        <span>Auto renewed monthly. Payments are automatically renewed upon the expiry of your selected ticket until you cancel your subscription.</span>
+        <span>Auto renewed monthly until cancelled.</span>
       </a>
 
-      <a class="pay-card" href="REPLACE_WITH_LINK">
+      <a class="pay-card" href="REPLACE_WITH_LINK" target="_blank" rel="noopener">
         <h3>€50 bi-annually</h3>
         <p>1 ticket for 26 weekly draws</p>
-        <span>Auto renewed every 6 months. Payments are automatically renewed upon the expiry of your selected ticket until you cancel your subscription.</span>
+        <span>Auto renewed every 6 months.</span>
       </a>
 
-      <a class="pay-card highlight" href="REPLACE_WITH_LINK">
+      <a class="pay-card highlight" href="REPLACE_WITH_LINK" target="_blank" rel="noopener">
+        <div class="badge">Most popular</div>
         <h3>€100 annually</h3>
         <p>1 ticket for 52 weekly draws</p>
-        <span>Auto renewed yearly. Payments are automatically renewed upon the expiry of your selected ticket until you cancel your subscription.</span>
+        <span>Auto renewed yearly.</span>
       </a>
 
     </div>
 
     <p class="renewal-note">
-      If you would like to cancel an automatically renewing ticket, please contact the club at
+      To cancel an automatically renewing ticket, contact
       <a href="mailto:treasurer.stmichaels.sligo@gaa.ie">
         treasurer.stmichaels.sligo@gaa.ie
       </a>.
     </p>
   </section>
 
-  <!-- NON AUTO RENEWAL -->
-  <section>
+  <!-- ONE OFF -->
+  <section id="oneoff">
     <h2>🧾 One-Off Club €300 Draw Entries</h2>
     <p class="section-intro">
       Pay once — no automatic renewal.
@@ -73,34 +84,34 @@
 
     <div class="payments">
 
-      <a class="pay-card secondary" href="REPLACE_WITH_LINK">
+      <a class="pay-card secondary" href="REPLACE_WITH_LINK" target="_blank" rel="noopener">
         <h3>€5 – One Week</h3>
         <p>3 tickets for the Club €300 Draw</p>
-        <span>No auto renewal. Payment is collected only once.</span>
+        <span>One-off payment.</span>
       </a>
 
-      <a class="pay-card secondary" href="REPLACE_WITH_LINK">
+      <a class="pay-card secondary" href="REPLACE_WITH_LINK" target="_blank" rel="noopener">
         <h3>€8 – One Month</h3>
         <p>1 ticket for the Club €300 Draw</p>
-        <span>No auto renewal. Payment is collected only once.</span>
+        <span>One-off payment.</span>
       </a>
 
-      <a class="pay-card secondary" href="REPLACE_WITH_LINK">
+      <a class="pay-card secondary" href="REPLACE_WITH_LINK" target="_blank" rel="noopener">
         <h3>€20 – One Month</h3>
         <p>3 tickets for the Club €300 Draw</p>
-        <span>No auto renewal. Payment is collected only once.</span>
+        <span>One-off payment.</span>
       </a>
 
-      <a class="pay-card secondary" href="REPLACE_WITH_LINK">
+      <a class="pay-card secondary" href="REPLACE_WITH_LINK" target="_blank" rel="noopener">
         <h3>€50 – 26 Weeks</h3>
         <p>1 ticket for 26 weekly draws</p>
-        <span>No auto renewal. Payment is collected only once.</span>
+        <span>One-off payment.</span>
       </a>
 
-      <a class="pay-card secondary" href="REPLACE_WITH_LINK">
+      <a class="pay-card secondary" href="REPLACE_WITH_LINK" target="_blank" rel="noopener">
         <h3>€100 – 52 Weeks</h3>
         <p>1 ticket for 52 weekly draws</p>
-        <span>No auto renewal. Payment is collected only once.</span>
+        <span>One-off payment.</span>
       </a>
 
     </div>
@@ -110,10 +121,17 @@
 
 <footer>
   <p>
-    © St Michael’s GAA Club, Sligo<br>
-    Club €300 Draw – for payment queries, please contact the club treasurer at treasurer.stmichaels.sligo@gaa.ie.
+    © <span id="year"></span> St Michael’s GAA Club, Sligo<br>
+    Club €300 Draw — payment queries:
+    <a href="mailto:treasurer.stmichaels.sligo@gaa.ie">
+      treasurer.stmichaels.sligo@gaa.ie
+    </a>
   </p>
 </footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
