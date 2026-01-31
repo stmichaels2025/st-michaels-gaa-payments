@@ -1,9 +1,4 @@
-/* =======================
-   RESET / BASE
-   ======================= */
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 :root{
   --green:#0a7c3a;
@@ -26,12 +21,10 @@ body{
   color: var(--text);
 }
 
-/* =======================
-   HERO / HEADER
-   ======================= */
+/* HERO */
 .hero{
   position: relative;
-  padding: 2.8rem 1rem 2.4rem;
+  padding: 3rem 1rem 2.6rem;
   color: white;
   background:
     linear-gradient(rgba(6,79,37,.82), rgba(6,79,37,.92)),
@@ -43,8 +36,7 @@ body{
 .hero-overlay{
   position:absolute;
   inset:0;
-  background:
-    radial-gradient(900px 500px at 20% 0%, rgba(243,197,82,.25), transparent 60%);
+  background: radial-gradient(900px 500px at 20% 0%, rgba(243,197,82,.25), transparent 60%);
 }
 
 .hero-inner{
@@ -53,17 +45,13 @@ body{
   margin: 0 auto;
   display: grid;
   gap: 16px;
-}
-
-.hero-centered{
   justify-items: center;
   text-align: center;
 }
 
-/* Crest */
 .crest-wrap{
-  width: 128px;
-  height: 128px;
+  width: 130px;
+  height: 130px;
   border-radius: 26px;
   display: grid;
   place-items: center;
@@ -72,61 +60,47 @@ body{
 }
 
 .club-crest{
-  width: 104px;
-  height: auto;
+  width: 106px;
   border-radius: 20px;
 }
 
-/* Hero text */
+/* HERO TEXT */
 .club-name{
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 900;
-  letter-spacing: .2px;
 }
 
 .club-draw{
-  font-size: 46px;
+  font-size: 52px;
   font-weight: 1000;
   color: var(--gold);
-  letter-spacing: .6px;
   text-transform: uppercase;
-  line-height: 1.05;
 }
 
 .club-slogan{
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 900;
-  letter-spacing: .4px;
   margin-top: 4px;
-  opacity: .95;
 }
 
 .hero-sub{
   max-width: 560px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 1.5;
-  opacity: .95;
 }
 
-/* Hero buttons */
+/* BUTTONS */
 .hero-actions{
   display:flex;
-  gap: 10px;
-  margin-top: 6px;
+  gap: 12px;
 }
 
 .btn{
-  padding: 10px 18px;
+  padding: 12px 20px;
   border-radius: 999px;
   font-weight: 900;
   text-decoration:none;
   border: 1px solid rgba(255,255,255,.35);
-  transition: transform .08s ease, filter .12s ease;
-}
-
-.btn:active{
-  transform: translateY(1px);
 }
 
 .btn-gold{
@@ -134,21 +108,13 @@ body{
   color: #1b1b1b;
 }
 
-.btn-gold:hover{
-  filter: brightness(1.05);
-}
-
 .btn-ghost{
-  background: rgba(255,255,255,.10);
+  background: rgba(255,255,255,.12);
   color: white;
 }
 
-/* =======================
-   MAIN PANEL
-   ======================= */
-main{
-  padding: 18px 12px 60px;
-}
+/* PANEL */
+main{ padding: 18px 12px 70px; }
 
 .panel{
   max-width: 1000px;
@@ -159,28 +125,22 @@ main{
   padding: 20px 16px;
 }
 
-/* =======================
-   SECTIONS
-   ======================= */
+/* SECTIONS */
 .section-head{
   max-width: 860px;
   margin: 0 auto 10px;
 }
 
 .section-head h2{
-  margin: 12px 0 4px;
-  font-size: 22px;
+  margin: 14px 0 4px;
 }
 
 .section-intro{
   margin: 0 0 12px;
   color: var(--muted);
-  font-size: 14.5px;
 }
 
-/* =======================
-   PAYMENTS GRID
-   ======================= */
+/* PAYMENTS */
 .payments{
   max-width: 860px;
   margin: 0 auto;
@@ -189,30 +149,20 @@ main{
 }
 
 @media (min-width: 800px){
-  .payments{
-    grid-template-columns: 1fr 1fr;
-  }
+  .payments{ grid-template-columns: 1fr 1fr; }
 }
 
 .pay-card{
   background: var(--card);
   border-radius: var(--radius);
   padding: 16px;
+  border: 1.5px solid var(--line);
   text-decoration:none;
   color: inherit;
-  border: 1.5px solid var(--line);
-  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
-}
-
-.pay-card:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 16px 28px rgba(0,0,0,.14);
-  border-color: rgba(10,124,58,.35);
 }
 
 .pay-card h3{
   margin:0;
-  font-size: 18px;
   color: var(--green-deep);
 }
 
@@ -224,100 +174,46 @@ main{
 .pay-card span{
   font-size: 13.5px;
   color: #555;
-  line-height: 1.4;
-  display:block;
 }
 
-/* Highlight / Special offer */
+/* HIGHLIGHT */
 .pay-card.highlight{
   border-color: var(--gold);
   box-shadow: 0 18px 34px rgba(243,197,82,.35);
 }
 
-.pay-card.highlight span{
-  font-weight: 600;
-  color: #333;
-}
-
-/* Badge */
 .badge{
   display:inline-block;
   margin-bottom: 8px;
   padding: 6px 12px;
-  font-size: 12px;
+  background: var(--gold);
   font-weight: 900;
   border-radius: 999px;
-  background: var(--gold);
-  color: #1b1b1b;
 }
 
-/* Secondary cards */
-.pay-card.secondary h3{
-  color: #333;
-}
-
-/* =======================
-   FAQ
-   ======================= */
+/* FAQ */
 .faq{
   max-width: 860px;
   margin: 0 auto;
-  display: grid;
+  display:grid;
   gap: 14px;
 }
 
-.faq-item h4{
-  margin: 0 0 4px;
-  font-size: 16px;
-}
+.faq-item h4{ margin:0 0 4px; }
+.faq-item p{ margin:0; color: var(--muted); }
 
-.faq-item p{
-  margin: 0;
-  font-size: 14px;
-  color: var(--muted);
-}
-
-/* =======================
-   TRUST LINE
-   ======================= */
+/* TRUST */
 .trust-line{
   max-width: 860px;
   margin: 18px auto 0;
   padding: 12px;
-  border-radius: 12px;
   background: #eef3ef;
-  font-size: 14px;
+  border-radius: 12px;
   text-align: center;
   font-weight: 600;
 }
 
-/* =======================
-   NOTES / DIVIDERS / FOOTER
-   ======================= */
-.renewal-note{
-  max-width: 860px;
-  margin: 14px auto 0;
-  font-size: 14px;
-  color: var(--muted);
-}
-
-.renewal-note a{
-  color: var(--green-deep);
-  font-weight: 900;
-  text-decoration:none;
-}
-
-.renewal-note a:hover{
-  text-decoration: underline;
-}
-
-.divider{
-  max-width: 860px;
-  margin: 20px auto;
-  border: none;
-  border-top: 1px solid rgba(0,0,0,.14);
-}
-
+/* FOOTER */
 .footer{
   max-width: 860px;
   margin: 20px auto 0;
@@ -325,19 +221,7 @@ main{
   color: #555;
 }
 
-.footer a{
-  color: var(--green-deep);
-  font-weight: 900;
-  text-decoration:none;
-}
-
-.footer a:hover{
-  text-decoration: underline;
-}
-
-/* =======================
-   STICKY HELP BAR
-   ======================= */
+/* STICKY HELP */
 .sticky-help{
   position: fixed;
   bottom: 0;
@@ -345,14 +229,8 @@ main{
   right: 0;
   background: var(--green);
   color: white;
-  padding: 10px 14px;
+  padding: 12px;
   text-align: center;
-  font-size: 14px;
+  font-weight: 700;
   z-index: 999;
-}
-
-.sticky-help a{
-  color: white;
-  font-weight: 900;
-  text-decoration: underline;
 }
