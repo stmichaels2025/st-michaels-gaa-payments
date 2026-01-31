@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>St Michael’s GAA Club – €300 Club Draw</title>
   <meta name="description" content="St Michael’s GAA Club – €300 Club Draw payments" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=4" />
 </head>
 <body>
 
@@ -149,4 +149,55 @@
     <hr class="divider" />
 
     <!-- FAQ -->
-    <sectio
+    <section id="faq">
+      <div class="section-head">
+        <h2>❓ Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq">
+        <div class="faq-item">
+          <h4>When is the draw held?</h4>
+          <p>The draw is held weekly at St Michael’s pitch in Ballintogher.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>How do I cancel an auto renewal?</h4>
+          <p>To cancel an auto renewal, please contact treasurer.stmichaels.sligo@gaa.ie.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Will I get a receipt?</h4>
+          <p>For receipts, please contact treasurer.stmichaels.sligo@gaa.ie.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Who do I contact if there’s an issue?</h4>
+          <p>Please contact any member of the executive committee or email treasurer.stmichaels.sligo@gaa.ie.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-line">
+      🔒 Payments are processed securely. Card details are never stored on this website.
+    </div>
+
+    <footer class="footer">
+      <p>
+        © <span id="year"></span> St Michael’s GAA Club —
+        treasurer.stmichaels.sligo@gaa.ie
+      </p>
+    </footer>
+
+  </div>
+</main>
+
+<div class="sticky-help">
+  Need help? treasurer.stmichaels.sligo@gaa.ie
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
