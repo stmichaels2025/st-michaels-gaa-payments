@@ -27,7 +27,7 @@ body{
   position: relative;
   padding: 3rem 1rem 2.6rem;
   color: white;
-  background-image: url("background.jpg");
+  background-image: url("background-v2.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -204,3 +204,4 @@ main{ padding: 18px 12px 78px; }
 
   .club-draw{ font-size: 42px; }
 }
+
