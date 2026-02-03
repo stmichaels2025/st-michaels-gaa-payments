@@ -28,7 +28,7 @@ body{
   color: white;
   background:
     linear-gradient(rgba(6,79,37,.82), rgba(6,79,37,.92)),
-    url("./background.jpg");
+    url("./background-v2.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -234,3 +234,4 @@ main{ padding: 18px 12px 70px; }
   font-weight: 700;
   z-index: 999;
 }
+
