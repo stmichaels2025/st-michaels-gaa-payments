@@ -1,4 +1,3 @@
-/* --- base + variables --- */
 * { box-sizing: border-box; }
 
 :root{
@@ -22,7 +21,7 @@ body{
   color: var(--text);
 }
 
-/* --- HERO --- */
+/* HERO */
 .hero{
   position: relative;
   padding: 3rem 1rem 2.6rem;
@@ -103,7 +102,7 @@ body{
 .btn-gold{ background: var(--gold); color:#1b1b1b; }
 .btn-ghost{ background: rgba(255,255,255,.12); color:white; }
 
-/* PANEL + CONTENT */
+/* PANEL */
 main{ padding: 18px 12px 78px; }
 
 .panel{
@@ -159,7 +158,7 @@ main{ padding: 18px 12px 78px; }
   border-radius: 999px;
 }
 
-/* FAQ + FOOTER */
+/* FAQ + TRUST + FOOTER */
 .faq{ max-width: 860px; margin: 0 auto; }
 .trust-line{
   max-width: 860px;
@@ -192,16 +191,19 @@ main{ padding: 18px 12px 78px; }
   text-decoration: underline;
 }
 
-/* --- MOBILE HERO TUNING --- */
+/* --- MOBILE: PITCH IMAGE OPTIMISED --- */
 @media (max-width: 768px){
-  .hero{ background-position: center top; }
-
-  .hero::before{
-    background: linear-gradient(rgba(6,79,37,.45), rgba(6,79,37,.65));
+  .hero{
+    min-height: 480px;
+    background-size: 100% auto;
+    background-position: center 30%;
   }
 
-  .hero-overlay{ opacity: 0.6; }
+  .hero::before{
+    background: linear-gradient(rgba(6,79,37,.40), rgba(6,79,37,.65));
+  }
+
+  .hero-overlay{ opacity: 0.5; }
 
   .club-draw{ font-size: 42px; }
 }
-
