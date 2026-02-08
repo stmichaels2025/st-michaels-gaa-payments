@@ -58,19 +58,21 @@ body{
 }
 
 .crest-wrap{
-  width: 160px;
-  height: 160px;
-  border-radius: 30px;
+  width: 190px;
+  height: 190px;
+  border-radius: 34px;
   display: grid;
   place-items: center;
-  background: rgba(255,255,255,.12);
-  box-shadow: 0 18px 50px rgba(0,0,0,.35);
+  background: rgba(255,255,255,.15);
+  box-shadow: 0 22px 60px rgba(0,0,0,.4);
 }
 
 .club-crest{
-  width: 130px;
-  border-radius: 22px;
+  width: 155px;
+  height: auto;
+  border-radius: 26px;
 }
+
 
 /* HERO TEXT */
 .club-name{ font-size: 24px; font-weight: 900; }
@@ -207,4 +209,5 @@ main{ padding: 18px 12px 78px; }
 
   .club-draw{ font-size: 42px; }
 }
+
 
